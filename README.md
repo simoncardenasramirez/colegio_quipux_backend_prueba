@@ -36,3 +36,17 @@ Password: *(vacío)*
   ```json
   { "nombre": "Ana López", "materiaIds": [1,2] }
 
+  - **Consultar estudiante por ID**  
+  GET /api/estudiantes/{id}  
+
+- **Consultar materias de un estudiante**  
+  GET /api/estudiantes/{id}/materias  
+
+- **Matricular materias a un estudiante existente**  
+  PUT /api/estudiantes/{id}/materias  
+  Body JSON:  
+  ```json
+  [1, 3]
+
+
+
