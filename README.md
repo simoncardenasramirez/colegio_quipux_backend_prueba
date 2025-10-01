@@ -16,34 +16,23 @@ Password: *(vacío)*
   Body JSON:  
   ```json
   { "nombre": "Matemáticas I" }
-Listar materias
-GET /api/materias
 
-Estudiantes
-Crear estudiante (sin materias)
-POST /api/estudiantes
-Body JSON:
+- **Listar materias**  
+  GET /api/materias  
 
-json
-Copiar código
-{ "nombre": "Juan Perez", "materiaIds": [] }
-Crear estudiante con materias
-POST /api/estudiantes
-Body JSON:
+---
 
-json
-Copiar código
-{ "nombre": "Ana López", "materiaIds": [1,2] }
-Consultar estudiante por ID
-GET /api/estudiantes/{id}
+### Estudiantes
 
-Consultar materias de un estudiante
-GET /api/estudiantes/{id}/materias
+- **Crear estudiante (sin materias)**  
+  POST /api/estudiantes  
+  Body JSON:  
+  ```json
+  { "nombre": "Juan Perez", "materiaIds": [] }
 
-Matricular materias a un estudiante existente
-PUT /api/estudiantes/{id}/materias
-Body JSON:
+  - **Crear estudiante con materias**  
+  POST /api/estudiantes  
+  Body JSON:  
+  ```json
+  { "nombre": "Ana López", "materiaIds": [1,2] }
 
-json
-Copiar código
-[1, 3]
