@@ -16,6 +16,7 @@ Password: *(vacío)*
   Body JSON:  
   ```json
   { "nombre": "Matemáticas I" }
+  ```
 
 - **Listar materias**  
   GET /api/materias  
@@ -29,14 +30,16 @@ Password: *(vacío)*
   Body JSON:  
   ```json
   { "nombre": "Juan Perez", "materiaIds": [] }
+  ```
 
-  - **Crear estudiante con materias**  
+- **Crear estudiante con materias**  
   POST /api/estudiantes  
   Body JSON:  
   ```json
   { "nombre": "Ana López", "materiaIds": [1,2] }
+  ```
 
-  - **Consultar estudiante por ID**  
+- **Consultar estudiante por ID**  
   GET /api/estudiantes/{id}  
 
 - **Consultar materias de un estudiante**  
@@ -47,6 +50,4 @@ Password: *(vacío)*
   Body JSON:  
   ```json
   [1, 3]
-
-
-
+  ```
