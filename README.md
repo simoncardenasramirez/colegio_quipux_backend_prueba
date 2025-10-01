@@ -11,43 +11,34 @@ Password: *(vacío)*
 
 ### Materias
 
-- **Crear materia**  
-  POST /api/materias  
-  Body JSON:  
-  ```json
-  { "nombre": "Matemáticas I" }
-  ```
+1. **POST /api/materias** → Crear materia  
+   Body JSON:  
+   ```json
+   { "nombre": "Matemáticas I" }
+   ```
 
-- **Listar materias**  
-  GET /api/materias  
+2. **GET /api/materias** → Listar todas las materias  
 
 ---
 
 ### Estudiantes
 
-- **Crear estudiante (sin materias)**  
-  POST /api/estudiantes  
-  Body JSON:  
-  ```json
-  { "nombre": "Juan Perez", "materiaIds": [] }
-  ```
+3. **POST /api/estudiantes** → Crear estudiante (con o sin materias)  
+   Body JSON (sin materias):  
+   ```json
+   { "nombre": "Juan Perez", "materiaIds": [] }
+   ```  
+   Body JSON (con materias):  
+   ```json
+   { "nombre": "Ana López", "materiaIds": [1,2] }
+   ```
 
-- **Crear estudiante con materias**  
-  POST /api/estudiantes  
-  Body JSON:  
-  ```json
-  { "nombre": "Ana López", "materiaIds": [1,2] }
-  ```
+4. **GET /api/estudiantes/{id}** → Consultar estudiante por ID  
 
-- **Consultar estudiante por ID**  
-  GET /api/estudiantes/{id}  
+5. **GET /api/estudiantes/{id}/materias** → Consultar materias de un estudiante  
 
-- **Consultar materias de un estudiante**  
-  GET /api/estudiantes/{id}/materias  
-
-- **Matricular materias a un estudiante existente**  
-  PUT /api/estudiantes/{id}/materias  
-  Body JSON:  
-  ```json
-  [1, 3]
-  ```
+6. **PUT /api/estudiantes/{id}/materias** → Matricular materias a un estudiante existente  
+   Body JSON:  
+   ```json
+   [1, 3]
+   ```
